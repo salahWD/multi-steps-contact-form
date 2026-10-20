@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Multi-step form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="form">
+    <!-- sidebar start -->
+    <div class="sidebar">
+
+      <!-- step one -->
+      <div class="item">
+        <span class="icon">1</span>
+        <div class="details">
+          <p class="sub-title">step 1</p>
+          <p class="title">Your Info</p>
+        </div>
+      </div>
+
+      <!-- step tow -->
+      <div class="item">
+        <span class="icon">2</span>
+        <div class="details">
+          <p class="sub-title">step 2</p>
+          <p class="title">select plat</p>
+        </div>
+      </div>
+
+      <!-- step three -->
+      <div class="item">
+        <span class="icon">3</span>
+        <div class="details">
+          <p class="sub-title">step 3</p>
+          <p class="title">add-ons</p>
+        </div>
+      </div>
+      
+      <!-- step four -->
+      <div class="item">
+        <span class="icon">4</span>
+        <div class="details">
+          <p class="sub-title">step 4</p>
+          <p class="title">summary</p>
+        </div>
+      </div>
+
+      
+      <div class="bg"></div>
+    </div>
+    <!-- sidebar end -->
+
+    <div class="steps">
+      <!-- Steps start 1 -->
+      <div class="step active">
+        <h2 class="title">personal info</h2>
+        <p class="lead">please provide your name, email address, and phone number</p>
+
+        <div class="input-group">
+
+          <!-- input 1 -->
+          <div class="information">
+            <label for="name">Name</label>
+            <input
+              id="name"
+              name="name"
+              class="form-control"
+              placeholder="e.g. Stephen king"
+              type="text">
+          </div>
+
+          <!-- input 2 -->
+          <div class="information">
+            <label for="email">Email Address</label>
+            <input
+              id="email"
+              name="email"
+              class="form-control"
+              placeholder="e.g. stephenking@lorem.com"
+              type="email">
+          </div>
+
+          <!-- input 3 -->
+          <div class="information">
+            <label for="phone">phone number</label>
+            <input
+              id="phone"
+              name="phone"
+              class="form-control"
+              placeholder="e.g. +1 234 567 890"
+              type="number">
+          </div>
+
+          <div class="button">
+            <button class="btn">Next Step</button>
+          </div>
+        </div>
+      </div>
+      <!-- end step 1 -->
+
+      <!-- Start step 2 -->
+      <div class="step">
+        <h2 class="title">personal info</h2>
+        <p class="lead">please provide your name, email address, and phone number</p>
+
+        <div class="input-group">
+
+          <!-- input 1 -->
+          <div class="information">
+            <label for="name">Name</label>
+            <input
+              id="name"
+              name="name"
+              class="form-control"
+              placeholder="e.g. Stephen king"
+              type="text">
+          </div>
+
+          <!-- input 2 -->
+          <div class="information">
+            <label for="email">Email Address</label>
+            <input
+              id="email"
+              name="email"
+              class="form-control"
+              placeholder="e.g. stephenking@lorem.com"
+              type="email">
+          </div>
+
+          <!-- input 3 -->
+          <div class="information">
+            <label for="phone">phone number</label>
+            <input
+              id="phone"
+              name="phone"
+              class="form-control"
+              placeholder="e.g. +1 234 567 890"
+              type="number">
+          </div>
+
+          <div class="button">
+            <button class="btn">Next Step</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+  <footer class="attribution">
+    Created by <a href="https://github.com/salahWD">Salah Bakhach</a>.
+  </footer>
+</body>
+
+</html>
