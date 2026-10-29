@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+
 * {
     box-sizing: border-box;
 }
+
 body {
     padding: 1px;
     height: 100dvh;
@@ -9,6 +11,7 @@ body {
     line-height: 1.5;
     margin: 0;
 }
+
 .form {
     margin: auto;
     margin-top: 7rem;
@@ -16,10 +19,13 @@ body {
     display: flex;
     min-height: 550px;
     gap: 32px;
-    /* max-width: 740px; */
+    max-width: 820px;
+    /* box-shadow: 0px 2px 20px -2px #3f4147; */
+    border-radius: 10px;
 }
+
 .form .sidebar {
-    min-width: 250px;
+    min-width: 270px;
     position: relative;
     padding: 2rem 0 0 2rem;
 
@@ -27,6 +33,7 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
 }
+
 /* .form .sidebar .bg {
 } */
 .form .sidebar .item {
@@ -35,6 +42,7 @@ body {
     align-items: center;
     margin-bottom: 1rem;
 }
+
 .form .sidebar .item .icon {
     color: white;
     border: 1px solid white;
@@ -45,65 +53,175 @@ body {
     place-items: center;
     border-radius: 50%;
 }
+
+.form .sidebar .item.active .icon {
+    color: black;
+    border-color: hsl(206, 94%, 87%);
+    background-color: hsl(206, 94%, 87%);
+}
+
 .form .sidebar .item .details {
     color: white;
     line-height: 1.3;
 }
+
 .form .sidebar .item .details .sub-title {
     margin: 0;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 100;
     opacity: 0.8;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
+
 .form .sidebar .item .details .title {
     margin: 0;
     font-size: 18px;
-    font-weight: 800;
+    font-weight: 700;
     text-transform: uppercase;
+    letter-spacing: 2px;
 }
+
+.form .steps-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
 .form .steps {
     width: 100%;
     display: flex;
     position: relative;
     overflow: hidden;
     padding: 2rem 4rem;
+    height: 470px;
 }
+
 .form .steps .step {
     opacity: 0;
-    max-width: 450px;
-    display: none;
     position: absolute;
     width: 100%;
-    left: 0;
+    left: 100%;
     padding: 0 2rem;
+    transition: opacity 0.5s ease-out, left 0.5s ease-out;
 }
+
 .form .steps .step.active {
-    /* display: none; */
-    display: block;
     opacity: 1;
+    left: 0%;
 }
-.form .steps .step .title {
+
+.form .steps .step:nth-of-type(2) {
+    padding: 0 1rem;
+}
+
+.form .steps .step>.title {
     color: hsl(213, 96%, 18%);
     text-transform: capitalize;
     font-size: 32px;
     margin: 0;
-    /* margin-bottom: 12px; */
 }
+
 .form .steps .step .lead {
     color: hsl(231, 11%, 63%);
     margin: 0;
 }
+
+.form .steps .step .plans {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.form .plans .plan {
+    padding: 1rem;
+    width: 100%;
+    border-radius: 10px;
+    transition: all 0.4s ease-in-out;
+    /* box-shadow: 0 0 0 0.25rem transparent; */
+    will-change: box-shadow, border-color;
+    border: 1px solid transparent;
+}
+
+.form .plans .plan.active,
+.form .plans .plan:hover {
+    border: 1px solid hsl(243, 100%, 62%);
+}
+
+.form .plans .plan:hover {
+    box-shadow: 0 0 0 0.15rem rgba(25, 2, 90, 0.25);
+}
+
+.form .plan .icon {
+    margin-bottom: 45px;
+}
+
+.form .plan .title {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0;
+    color: hsl(213, 96%, 18%);
+}
+
+.form .plan .price {
+    margin: 0;
+    line-height: 1;
+    color: hsl(231, 11%, 63%);
+}
+
+.form .sub-duration {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.form .sub-duration .sub-type {}
+
+.form .sub-duration .custom-radio {
+    width: 50px;
+    height: 25px;
+    border-radius: 50px;
+    background-color: hsl(213, 96%, 18%);
+    position: relative;
+}
+
+.form .sub-duration .custom-radio::before {
+    transition: left 0.2s ease-out;
+    content: "";
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translate(-50%, -50%);
+}
+
+.form .sub-duration .custom-radio.active::before {
+    left: calc(100% - 12px);
+    transform: translate(-50%, -50%);
+}
+
+.form .sub-duration .custom-radio input {
+    display: none;
+}
+
 .form .step .input-group {
     display: flex;
     flex-direction: column;
     gap: 32px;
     margin-top: 32px;
 }
+
 .form .step .input-group .information {
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
+
 .form .step .information label {
     color: hsl(243, 100%, 62%);
     color: rgb(2, 41, 90);
@@ -111,29 +229,35 @@ body {
     font-size: 16px;
     text-transform: capitalize;
 }
+
 .form .step .information input {
-  display: block;
-  /* width: calc(100% - 40px); */
-  padding: 0.375rem 0.75rem;
-  font-size: 1rem;
-  line-height: 1.5;
-  color: #212529;
-  background-color: #fff;
-  border: 1px solid rgb(150, 153, 171, 0.5);
-  border-radius: 0.375rem;
-  transition-duration: 0.4s;
-  transition-property: border, box-shadow;
+    display: block;
+    /* width: calc(100% - 40px); */
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    border: 1px solid rgb(150, 153, 171, 0.5);
+    border-radius: 0.375rem;
+    transition-duration: 0.4s;
+    transition-property: border, box-shadow;
+    font-weight: 600;
 }
+
 .form .step .information input:focus {
     border: 1px solid hsl(243, 100%, 62%);
     outline: 0;
-    box-shadow: 0 0 0 0.25rem rgba(2, 41, 90, 0.25);
+    /* box-shadow: 0 0 0 0.25rem rgba(2, 41, 90, 0.25); */
 }
-.form .step .button {
+
+.form .button {
     align-self: flex-end;
 }
-.form .step .button .btn {
-    background: hsl(243, 100%, 62%);
+
+.form .button .btn {
+    /* background: hsl(243, 100%, 62%); */
+    background: hsl(213, 96%, 18%);
     color: white;
     font-weight: 600;
     font-size: 16px;
@@ -142,14 +266,17 @@ body {
     border-radius: 0.375rem;
     transition: 0.4s;
 }
-.form .step .button .btn:hover {
-    background: hsl(243, 67%, 48%);
+
+.form .button .btn:hover {
+    /* background: hsl(243, 67%, 48%); */
+    background: hsl(243, 100%, 62%);
 }
 
 .attribution {
     margin-top: 10rem;
     text-align: center;
 }
+
 .attribution a {
     color: hsl(243, 67%, 48%);
 }

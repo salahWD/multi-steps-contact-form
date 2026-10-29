@@ -21,7 +21,7 @@
     <div class="sidebar">
 
       <!-- step one -->
-      <div class="item">
+      <div class="item active">
         <span class="icon">1</span>
         <div class="details">
           <p class="sub-title">step 1</p>
@@ -46,7 +46,7 @@
           <p class="title">add-ons</p>
         </div>
       </div>
-      
+
       <!-- step four -->
       <div class="item">
         <span class="icon">4</span>
@@ -56,111 +56,89 @@
         </div>
       </div>
 
-      
+
       <div class="bg"></div>
     </div>
     <!-- sidebar end -->
 
-    <div class="steps">
-      <!-- Steps start 1 -->
-      <div class="step active">
-        <h2 class="title">personal info</h2>
-        <p class="lead">please provide your name, email address, and phone number</p>
+    <div class="steps-container">
+      <div class="steps">
+        <!-- Steps start 1 -->
+        <div class="step ">
+          <h2 class="title">personal info</h2>
+          <p class="lead">please provide your name, email address, and phone number</p>
 
-        <div class="input-group">
+          <div class="input-group">
 
-          <!-- input 1 -->
-          <div class="information">
-            <label for="name">Name</label>
-            <input
-              id="name"
-              name="name"
-              class="form-control"
-              placeholder="e.g. Stephen king"
-              type="text">
+            <!-- input 1 -->
+            <div class="information">
+              <label for="name">Name</label>
+              <input id="name" name="name" class="form-control" placeholder="e.g. Stephen king" type="text">
+            </div>
+
+            <!-- input 2 -->
+            <div class="information">
+              <label for="email">Email Address</label>
+              <input id="email" name="email" class="form-control" placeholder="e.g. stephenking@lorem.com" type="email">
+            </div>
+
+            <!-- input 3 -->
+            <div class="information">
+              <label for="phone">phone number</label>
+              <input id="phone" name="phone" class="form-control" placeholder="e.g. +1 234 567 890" type="number">
+            </div>
+
+          </div>
+        </div>
+        <!-- end step 1 -->
+
+        <!-- Start step 2 -->
+        <div class="step active">
+          <h2 class="title">Select your plan</h2>
+          <p class="lead">You have the option of monthly or yearly biling.</p>
+
+          <div class="plans">
+
+            <div class="plan">
+              <div class="icon"><img src="./assets/images/icon-arcade.svg" alt=""></div>
+              <p class="title">Arcade</p>
+              <p class="price">$9/mo</p>
+            </div>
+            <div class="plan active">
+              <div class="icon"><img src="./assets/images/icon-advanced.svg" alt=""></div>
+              <p class="title">Advanced</p>
+              <p class="price">$12/mo</p>
+            </div>
+            <div class="plan">
+              <div class="icon"><img src="./assets/images/icon-pro.svg" alt=""></div>
+              <p class="title">Pro</p>
+              <p class="price">$15/mo</p>
+            </div>
+
           </div>
 
-          <!-- input 2 -->
-          <div class="information">
-            <label for="email">Email Address</label>
-            <input
-              id="email"
-              name="email"
-              class="form-control"
-              placeholder="e.g. stephenking@lorem.com"
-              type="email">
+          <div class="sub-duration flex">
+            <p class="sub-type">Monthly</p>
+            <div class="custom-radio">
+              <input type="radio" name="sub-type" id="sub-type">
+            </div>
+            <p class="sub-type">Yearly</p>
           </div>
 
-          <!-- input 3 -->
-          <div class="information">
-            <label for="phone">phone number</label>
-            <input
-              id="phone"
-              name="phone"
-              class="form-control"
-              placeholder="e.g. +1 234 567 890"
-              type="number">
-          </div>
-
-          <div class="button">
-            <button class="btn">Next Step</button>
-          </div>
         </div>
       </div>
-      <!-- end step 1 -->
-
-      <!-- Start step 2 -->
-      <div class="step">
-        <h2 class="title">personal info</h2>
-        <p class="lead">please provide your name, email address, and phone number</p>
-
-        <div class="input-group">
-
-          <!-- input 1 -->
-          <div class="information">
-            <label for="name">Name</label>
-            <input
-              id="name"
-              name="name"
-              class="form-control"
-              placeholder="e.g. Stephen king"
-              type="text">
-          </div>
-
-          <!-- input 2 -->
-          <div class="information">
-            <label for="email">Email Address</label>
-            <input
-              id="email"
-              name="email"
-              class="form-control"
-              placeholder="e.g. stephenking@lorem.com"
-              type="email">
-          </div>
-
-          <!-- input 3 -->
-          <div class="information">
-            <label for="phone">phone number</label>
-            <input
-              id="phone"
-              name="phone"
-              class="form-control"
-              placeholder="e.g. +1 234 567 890"
-              type="number">
-          </div>
-
-          <div class="button">
-            <button class="btn">Next Step</button>
-          </div>
-        </div>
+      <div class="button">
+        <button id="btn" class="btn">Next Step</button>
       </div>
     </div>
-    
+
   </div>
 
   <footer class="attribution">
     Created by <a href="https://github.com/salahWD">Salah Bakhach</a>.
   </footer>
+
+  <script src="./script.js"></script>
 </body>
 
 </html>
